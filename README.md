@@ -28,3 +28,11 @@ Note: the covariates are standardized.
 - **config_july2023.yml**: config file
 - **analisi-covariate.Rmd**: an RMarkdown document to document the main model outputs
 
+- ## Authors :writing_hand:
+
+* Guido Fioravanti, European Commission's Joint Research Center <guido.fioravanti@ec.europa.eu>
+* Sara Martino, Norwegian University of Science and Technology, Norway
+* Michela Cameletti, Universita degli Studi di Bergamo, Italy
+* Andrea Toreti, European Commission's Joint Research Center
+
+
