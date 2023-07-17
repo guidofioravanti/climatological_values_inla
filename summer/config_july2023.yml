@@ -1,0 +1,14 @@
+default:
+  model: "trendLineare_con_iid_su_anno"
+  param: tmax
+  number_of_years: 60
+  last_year: 2020
+  only_aeronautica: FALSE
+winter:
+  months: !expr c(1,2,12)
+spring:
+  months: !expr 3:5
+summer:
+  months: !expr 6:8
+autumn:
+  months: !expr 9:11
