@@ -1,4 +1,4 @@
-# Interpolating climate variables by using INLA and the SPDE approach
+## Interpolating climate variables by using INLA and the SPDE approach
 
 This repository contains code and resources that can be used to reproduce the results presented in the paper: "*Interpolating climate variables by using INLA and the SPDE approach*".
 
