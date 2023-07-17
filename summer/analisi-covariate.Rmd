@@ -1,0 +1,57 @@
+---
+title: "Analisi covariate modello temperatura"
+author: Guido
+params:
+  result: ''
+  stagione: ''
+  mese: ''
+  param: ''
+output: html_document
+---
+
+Parametro in esame: `r params$PARAM`
+
+
+```{r intro,include=FALSE,echo=FALSE,warning=FALSE}
+library("tidyverse")
+library("janitor")
+library("INLA")
+library("brinla")
+library("knitr")
+
+knitr::opts_chunk$set(layout="l-body-outset",warning = FALSE,message = FALSE,echo=FALSE,fig.height=4,include = FALSE,eval = TRUE)
+```
+
+```{r leggiRisultati,eval=FALSE}
+params$result->inla.out
+```
+
+
+```{r myformula,include=TRUE}
+as.formula(inla.out$.args$formula)->myformula
+```
+
+### Formula modello
+
+`r as.character(myformula)`
+
+---
+
+
+## Fixed effects
+
+```{r marginaliPlot,include=TRUE,fig.height=6,layout="l-page"}
+brinla::bri.fixed.plot(inla.out)
+```
+
+
+```{r summaryFixed,include=TRUE}
+inla.out$summary.fixed
+```
+
+## Summary hyper
+
+```{r summaryHyper,include=TRUE}
+inla.out$summary.hyperpar
+```
+
