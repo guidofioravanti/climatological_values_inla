@@ -13,8 +13,6 @@ Parametro in esame: `r params$PARAM`
 
 
 ```{r intro,include=FALSE,echo=FALSE,warning=FALSE}
-library("tidyverse")
-library("janitor")
 library("INLA")
 library("brinla")
 library("knitr")
